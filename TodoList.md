@@ -1,0 +1,137 @@
+- Modeling
+  - [x] Config for exporting models from Blender to FBX
+  - Materials
+    - [x] Simplified MM_FactoryBaked in Blender
+    - [ ] More accurate MM_FactoryBaked in Blender
+  - Drone
+    - Crude model
+      - [x] Model
+      - [ ] Material assignment
+    - [ ] Refined model
+  - Remote control (RC)
+    - Crude model
+      - [x] Model
+      - [x] Material assignment
+    - [ ] Refined model
+  - Googles
+    - Crude model
+      - [ ] Model
+      - [ ] Material assignment
+    - [ ] Refined model
+  - Retranslator
+    - Crude model
+      - [ ] Model
+      - [ ] Material assignment
+    - [ ] Refined model
+- Animations
+  - [x] Config for exporting only animations from Blender to FBX
+  - Character
+    - [x] Character reanimation pipeline for Blender
+    - [x] Blender script to dislocate 3-person animations to get 1-person animations
+    - RC animations
+      - [ ] Equipping the RC
+      - Left hand holding RC: when no free drones nearby or the right hand is holding a drone or ready to put on the googles
+        - [x] Crude left hand holding RC
+        - [ ] Refined left hand holding RC
+            - [ ] Running/Jumping/Stopping...
+      - Both hands holding RC: when a free drone is nearby and ready to take control of it without googles
+        - [x] Crude both hands holding RC
+        - [ ] Refined both hands holding RC
+            - [ ] Running/Jumping/Stopping...
+      - Right hand holding a drone
+        - [x] Crude right hand holding a drone
+        - [ ] Refined right hand holding a drone
+            - [ ] Running/Jumping/Stopping...
+      - [ ] Taking out a drone
+      - Right hand holding a drone
+        - [x] Crude right hand holding a drone
+        - [ ] Refined right hand holding a drone
+            - [ ] Running/Jumping/Stopping...
+      - [ ] Putting a drone
+      - Right hand ready to pivot the googles
+        - [x] Crude right hand ready to pivot the googles
+        - [ ] Refined right hand ready to pivot the googles
+            - [ ] Running/Jumping/Stopping...
+      - [ ] Right hand pivoting the googles
+      - [ ] Moving sticks with the fingers animation
+  - Remote control (RC)
+    - [x] Sticks
+  - Googles
+    - [x] Original helmet for fitting in Blender
+    - [ ] Pivot on the helmet mount
+- [ ] Mod Icon
+- Logic
+  - States
+    - [x] Inheriting RC from FGChargedWeapon
+      - [x] Spawning drones with the left click
+      - Controlling
+        - [x] Starting/stopping controlling the nearest drone with the right click
+        - [x] Stopping to control when RC unequipped
+      - Googles
+        - [x] FPV when googles are equipped
+        - [x] Exit FPV when googles are unequipped
+  - Visuals
+    - Character
+      - [x] Character animations override replacement skeletal mesh (like in SuperPioneer)
+        - [x] Painting in Primary/Secondary/Overalls colors
+        - [x] Debug 1P/3P camera switch
+        - [ ] Test transitions between 1P and 3P views (like when character goes through the hypertube)
+        - [ ] Go to sitting animation when crouched and controlling a drone
+      - RC
+        - [x] Spawning and attaching as custom equipment
+          - [x] Painting in Primary/Secondary colors
+        - State-indicating animation  logic
+          - [x] Left hand holding RC: when no free drones nearby
+          - [x] Both hand holding RC: when a free drone is nearby and ready to take control of it without googles
+          - [x] Right hand ready to pivot the googles: when a free drone is nearby and ready to take control of it with googles
+        - [x] Sticks animation while piloting
+        - [ ] Moving sticks with the fingers animation
+      - Googles
+        - [x] Crude attachment as the head equipment
+        - [ ] Spawning and attaching as custom equipment
+          - [ ] Painting in Primary/Secondary colors
+        - [ ] Transition animation sequence to FPV when pivoting the googles
+          - [ ] See if can show drone's PoV on the google's model
+      - [ ] Sort out character model visibility from the drone
+    - Drone
+      - [ ] Speed of the propellers dependent on input
+      - [ ] Painting in Primary/Secondary colors on spawn
+  - Items
+    - Recipe/Schematic
+        - [x] Crude recipe/schematic from leaves
+        - [ ] Refined recipe/schematic
+    - [ ] Picking up drones
+    - [ ] Save drones on the ground
+  - Physics
+    - [x] Flight
+    - [x] Air drag
+    - [ ] Propwash/turbulence (like fall recovery stall/wobble)
+    - [ ] Reduce camera clipping through the ground
+    - Smoothness
+        - [ ] Check how network affects movement smoothness
+        - [ ] Check the UE 5.3 large world coordinates problem
+    - Radio coverage
+      - [ ] Limit to covered area
+  - Controls
+    - [x] Gamepad hooking
+    - [x] Keyboard input for testing
+  - Sound
+    - [x] Idle slow moving propellers sound
+    - [x] Sound of propellers dependent on input
+    - [ ] Configurable volume
+    - [ ] Flying through leaves sound
+    - [ ] Impact sounds
+    - [ ] See if the sound of a locally controlled drone could be made less choppy
+    - [ ] See what's up with the spatial sound being quieter inside the drone than outside
+  - Hud
+    - [ ] Different HUD when piloting with googles
+  - Buildings
+    - [ ] Doors
+    - [ ] Retranslator building (attaches to poles and power towers)
+      - [ ] Loss of control when the retranslator chain is broken
+    - Hypertubes
+        - [ ] Hypertube entrances are retranslators
+        - [ ] Every segment that is connected to a powered entrance works as a small retranslator (to fly along or inside the tubes)
+        - Flying inside the hypertubes
+            - [ ] Third-person camera
+            - [ ] First-person camera
