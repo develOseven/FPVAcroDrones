@@ -1,12 +1,12 @@
 /* SPDX-License-Identifier: LGPL-3.0-or-later */
 
-#include "FPVActoDronesGameWorldModule.h"
+#include "FPVAcroDronesGameWorldModule.h"
 
 #include "Patching/NativeHookManager.h"
 #include "Misc/CoreMisc.h"
 #include "SlateApplication.h"
 
-void UFPVActoDronesGameWorldModule::DispatchLifecycleEvent(ELifecyclePhase Phase)
+void UFPVAcroDronesGameWorldModule::DispatchLifecycleEvent(ELifecyclePhase Phase)
 {
     if (Phase == ELifecyclePhase::CONSTRUCTION)
     {
@@ -24,4 +24,14 @@ void UFPVActoDronesGameWorldModule::DispatchLifecycleEvent(ELifecyclePhase Phase
     }
 
     Super::DispatchLifecycleEvent(Phase);
+}
+
+float UFPVAcroDronesGameWorldModule::GetGNearClippingPlane() const
+{
+    return GNearClippingPlane;
+}
+
+void UFPVAcroDronesGameWorldModule::SetGNearClippingPlane(float NewGNearClippingPlane)
+{
+    GNearClippingPlane = NewGNearClippingPlane;
 }

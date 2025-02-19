@@ -4,11 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "Module/GameWorldModule.h"
-#include "FPVActoDronesGameWorldModule.generated.h"
+#include "FPVAcroDronesGameWorldModule.generated.h"
 
 
 UCLASS(Abstract)
-class FPVACRODRONES_API UFPVActoDronesGameWorldModule : public UGameWorldModule
+class FPVACRODRONES_API UFPVAcroDronesGameWorldModule : public UGameWorldModule
 {
 	GENERATED_BODY()
 
@@ -17,4 +17,10 @@ public:
 
 	UFUNCTION(BlueprintImplementableEvent)
 	void OnControllerAnalog(FName KeyName, FPlatformUserId PlatformUserId, FInputDeviceId InputDeviceId, float AnalogValue);
+
+	UFUNCTION(BlueprintCallable)
+	float GetGNearClippingPlane() const;
+
+	UFUNCTION(BlueprintCallable)
+	void SetGNearClippingPlane(float NewGNearClippingPlane);
 };
