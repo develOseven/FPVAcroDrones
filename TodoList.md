@@ -59,7 +59,7 @@
   - Googles
     - [x] Original helmet for fitting in Blender
     - [ ] Pivot on the helmet mount
-- [ ] Mod Icon
+- [X] Mod Icon
 - Logic
   - States
     - [x] Inheriting RC from FGChargedWeapon
