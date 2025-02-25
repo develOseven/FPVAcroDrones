@@ -111,7 +111,7 @@
         - [ ] Check how network affects movement smoothness
         - [ ] Check the UE 5.3 large world coordinates problem
     - Radio coverage
-      - [ ] Limit to covered area
+      - [X] Limit to covered area
   - Controls
     - [x] Gamepad hooking
     - [x] Keyboard input for testing
@@ -125,6 +125,7 @@
     - [ ] See what's up with the spatial sound being quieter inside the drone than outside
   - Hud
     - [ ] Different HUD when piloting with googles
+    - [ ] Radio coverage effects
   - Buildings
     - [ ] Doors
     - [ ] Retranslator building (attaches to poles and power towers)
