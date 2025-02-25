@@ -94,8 +94,8 @@
           - [ ] See if can show drone's PoV on the google's model
       - [ ] Sort out character model visibility from the drone
     - Drone
-      - [ ] Speed of the propellers dependent on input
-      - [ ] Painting in Primary/Secondary colors on spawn
+      - [X] Speed of the propellers dependent on input
+      - [X] Painting in Primary/Secondary colors on spawn
   - Items
     - Recipe/Schematic
         - [x] Crude recipe/schematic from leaves
@@ -106,7 +106,7 @@
     - [x] Flight
     - [x] Air drag
     - [ ] Propwash/turbulence (like fall recovery stall/wobble)
-    - [ ] Reduce camera clipping through the ground
+    - [X] Reduce camera clipping through the ground
     - Smoothness
         - [ ] Check how network affects movement smoothness
         - [ ] Check the UE 5.3 large world coordinates problem
